@@ -6,7 +6,7 @@
 [![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![Build Status](https://travis-ci.org/10up/distributor.svg?branch=trunk)](https://travis-ci.org/10up/distributor)
 [![Release Version](https://img.shields.io/github/release/10up/distributor.svg)](https://github.com/10up/distributor/releases/latest) ![WordPress tested up to version](https://img.shields.io/badge/WordPress-v5.4.2%20tested-success.svg) [![License](https://img.shields.io/github/license/10up/distributor.svg)](https://github.com/10up/distributor/blob/develop/LICENSE.md)
 
-*You can learn more about Distributor's features at [DistributorPlugin.com](https://distributorplugin.com).*
+*You can learn more about the Distributor's features at [DistributorPlugin.com](https://distributorplugin.com).*
 
 _Note:_ The latest stable version of the plugin is the _stable_ branch. [Download the stable branch]((https://github.com/10up/distributor/archive/stable.zip)) if you are intending to use the plugin in production.
 
@@ -27,13 +27,13 @@ _Note:_ The latest stable version of the plugin is the _stable_ branch. [Downloa
 
 ## Features
 
-Distributor supports safe, SEO-friendly content reuse and sharing via "pushing" and "pulling".
+The distributor supports safe, SEO-friendly content reuse and sharing via "pushing" and "pulling".
 
 While logged in and editing or viewing any single post (or custom post type) that can be distributed, a `Distributor` admin bar item will appear, that will facilitate sharing ("pushing") that content to any `connection`.
 
 <a href="http://distributorplugin.com/"><img src="https://distributorplugin.com/wp-content/themes/distributor-theme/assets/img/push-screenshot.jpg" alt="Push the content you’re editing or viewing to any of your other sites from the admin bar" width="600"></a>
 
-In the admin dashboard, a top level Distributor menu item links to the "pull" screen. Here, editors can share ("pull") content from any `connection` into the current site.
+In the admin dashboard, a top-level Distributor menu item links to the "pull" screen. Here, editors can share ("pull") content from any `connection` into the current site.
 
 <a href="http://distributorplugin.com/"><img src="https://distributorplugin.com/wp-content/themes/distributor-theme/assets/img/pull-screenshot.jpg" alt="Pull content from another site from the Distributor admin menu" width="600"></a>
 
@@ -47,14 +47,14 @@ There are two connection types: `internal` and `external`.
 
 ### Extendability
 
-Distributor is built with the same extensible approach as WordPress itself, with [fully documented hooks and filters](https://10up.github.io/distributor/) to customize its default behavior and create custom distribution workflows.  You can even create connections to other platforms.
+The distributor is built with the same extensible approach as WordPress itself, with [fully documented hooks and filters](https://10up.github.io/distributor/) to customize its default behavior and create custom distribution workflows.  You can even create connections to other platforms.
 
 ## Requirements
 
 * PHP 5.6+
 * [WordPress](http://wordpress.org) 4.7+
 * External connections require HTTP Basic Authentication or [WordPress.com OAuth2](https://developer.wordpress.com/docs/oauth2/) (must be on VIP) be set up on the remote website. For Basic Auth, we recommend the [Application Passwords](https://wordpress.org/plugins/application-passwords/) plugin.
-* For external connections, Distributor needs to be installed on BOTH sides of the connection.
+* For external connections, the Distributor needs to be installed on BOTH sides of the connection.
 
 ## Installation
 
@@ -71,7 +71,7 @@ To help inform our roadmap, keep adopters apprised of major updates and changes 
 1. Ensure Distributor is installed on BOTH sites being connected.  We'll refer to these as mainsite.com and remotesite.com.
 2. On mainsite.com, navigate to `Distributor` > `External Connections` and click `Add New`.
 3. Enter a label for the connection (e.g., `remotesite.com`), select `Username / Password` for the `Authentication Method`, and a username from remotesite.com.
-4. On remotesite.com, ensure that [Application Passwords](https://wordpress.org/plugins/application-passwords/) is installed. (_Note: Using this plugin instead of a normal WordPress users password helps limit the use of your primary password and will allow you to revoke access to Distributor in the future if needed._) Then navigate to the user profile that will be used to create the External Connection on mainsite.com and then to the `Application Passwords` section of the user profile (not the `Account Management` section).  Add a label for the New Application Password Name (e.g., `mainsite.com`) and click `Add New`.  Now copy the password provided into mainsite.com's External Connections `Password` field.
+4. On remotesite.com, ensure that [Application Passwords](https://wordpress.org/plugins/application-passwords/) are installed. (_Note: Using this plugin instead of a normal WordPress user password helps limit the use of your primary password and will allow you to revoke access to Distributor in the future if needed._) Then navigate to the user profile that will be used to create the External Connection on mainsite.com and then to the `Application Passwords` section of the user profile (not the `Account Management` section).  Add a label for the New Application Password Name (e.g., `mainsite.com`) and click `Add New`.  Now copy the password provided into mainsite.com's External Connections `Password` field.
 5. On mainsite.com, add the `External Connection URL` (e.g., http://remotesite.com/wp-json).  You should see a green circle and "_Connection established._".
 6. Ensure the roles selected in `Roles Allowed to Push` are the ones you want to support, then press the `Create Connection` button.  You should now be able to push from mainsite.com to remotesite.com.  If you want to pull from remotesite.com to mainsite.com, simply repeat these instructions swapping mainsite.com and remotesite.com.
 
@@ -81,7 +81,7 @@ To help inform our roadmap, keep adopters apprised of major updates and changes 
 
 ## Known Caveats/Issues
 
-__Gutenberg Fullscreen Mode__ - [Gutenberg 3.8](https://wptavern.com/gutenberg-3-8-released-adds-full-screen-mode) originally introduced `Fullscreen mode` for the editor and [WordPress 5.4](https://make.wordpress.org/core/2020/03/03/fullscreen-mode-enabled-by-default-in-the-editor/) and [Gutenberg 7.7](https://github.com/WordPress/gutenberg/pull/20611) made that the default setting.  Fullscreen mode creates a problem as the admin bar is no longer visible which means the Distributor push menu is no longer visible.  We are [working on researching a resolution to this issue](https://github.com/10up/distributor/issues/597), but in the meantime we recommend clicking on the three vertical dots in the upper right corner of Gutenberg and disabling fullscreen mode to ensure the admin bar and Distributor push menu is in view.
+__Gutenberg Fullscreen Mode__ - [Gutenberg 3.8](https://wptavern.com/gutenberg-3-8-released-adds-full-screen-mode) originally introduced `Fullscreen mode` for the editor and [WordPress 5.4](https://make.wordpress.org/core/2020/03/03/fullscreen-mode-enabled-by-default-in-the-editor/) and [Gutenberg 7.7](https://github.com/WordPress/gutenberg/pull/20611) made that the default setting.  Fullscreen mode creates a problem as the admin bar is no longer visible which means the Distributor push menu is no longer visible.  We are [working on researching a resolution to this issue](https://github.com/10up/distributor/issues/597), but in the meantime, we recommend clicking on the three vertical dots in the upper right corner of Gutenberg and disabling fullscreen mode to ensure the admin bar and Distributor push menu is in view.
 
 __Remote Request Timeouts__ - With external connections, HTTP requests are sent back and forth - creating posts, transfering images, syncing post updates, etc. In certain situations, mostly commonly when distributing posts with a large number of images (or very large file sizes), using poorly configured or saturated servers / hosts, or using plugins that add significant weight to post creation, Distributor requests can fail. Although we do some error handling, there are certain cases in which post distribution can fail silently. If distribution requests are taking a long time to load and/or failing, consider adjusting the timeout; you can filter the timeout for pushing external posts using the [`dt_push_post_timeout` filter](https://10up.github.io/distributor/dt_push_post_timeout.html). More advanced handling of large content requests, and improved error handling is on the road map for a future update.
 
